@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="skin/konopas.min.css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+<!-- Android + favicon -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="196x196" href="skin/favicon.196.png" />
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--
+<link rel="apple-touch-icon"                 href="data/icon.apple.60.png">
+<link rel="apple-touch-icon" sizes="76x76"   href="data/icon.apple.76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="data/icon.apple.120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="data/icon.apple.152.png">
+<link rel="apple-touch-startup-image" href="data/start.apple.1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.2048x1496.png" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.768x1004.png"  media="(device-width: 768px) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="data/start.apple.1024x748.png"  media="(device-width: 768px) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="data/start.apple.640x920.png"   media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.320x460.png"   media="(device-width: 320px)">
+-->
+
+<!-- Windows Phone 8.1 -->
+<!--
+<meta name="msapplication-TileColor"         content="#ffffff">
+<meta name="msapplication-square70x70logo"   content="data/icon.ie.png">
+<meta name="msapplication-square150x150logo" content="data/icon.ie.png">
+<meta name="msapplication-square310x310logo" content="data/icon.ie.png">
+-->
+
+<title>Nine Worlds 2015: Schedule</title>
+
+<body><div id="top"></div>
+<div id="load_disable"></div>
+
+<div id="time"></div>
+<div id="scroll"><a href="#top" id="scroll_link" data-txt>Scroll up</a></div>
+
+<div id="banner">
+<div id="server_connect"></div>
+
+<h1><a href="#info" alt="Nine Worlds 2015" title="Nine Worlds 2015">
+<img id="title-small" src="../themes/nineworlds/logo.png">
+<img id="title" src="../themes/nineworlds/logo.png"></a></h1>
+
+<ul id="tabs">
+<li id="tab_star"><a href="#star" data-txt>My con</a>
+<li id="tab_prog"><a href="#" data-txt>Programme</a><div id="day-sidebar" class="sub-side"></div>
+<li id="tab_part"><a href="#part" data-txt>People</a><div id="part-sidebar" class="sub-side"></div>
+<li id="tab_info"><a href="#info" data-txt>Info</a>
+</ul>
+
+<div id="refresh"><i class="refresh_icon"></i><span data-txt>Refresh data</span></div>
+</div>
+
+<div id="main">
+
+<div id="star_view" class="view">
+	<div id="star_data"></div>
+</div>
+
+<div id="prog_view" class="view">
+	<div id="prog_filters" class="filters">
+		<div id="prog_lists"></div>
+		<form name="search" id="search">
+			<input type="text" id="q" required data-txt="Search" data-txt-attr="placeholder" placeholder="Search">
+			<div id="q_ctrl">
+			<input type="submit" id="q_submit" data-txt="Go" data-txt-attr="value" text="Go" value="Go">
+			<input type="reset" id="q_clear" data-txt="Clear all" data-txt-attr="value" text="Clear all filters" value="Clear all filters">
+			</div>
+			<div id="q_hint" class="hint"></div>
+		</form>
+		<div id="filter_sum"></div>
+	</div>
+	<div id="day-narrow" class="sub-narrow"></div>
+</div>
+
+<div id="part_view" class="view">
+	<div id="part-narrow" class="sub-narrow"></div>
+	<ul id="part_names"></ul>
+	<div id="part_info"></div>
+</div>
+
+<div id="info_view" class="view">
+<h2>Welcome</h2>
+<p>This is the programme guide for <a href="../../../index.html" alt="Nine Worlds 2015" title="Nine Worlds 2015">Nine Worlds 2015</a>, designed for use on phone, desktop and tablet browsers. We'll keep the programme and participant data up to date throughout the convention if anything changes. <div id="last-updated">They were last updated <span></span>.</div></p>
+<h2>To find sessions</h2>
+<ul id="find_sessions">
+    <li>Click on <b>Programme</b>.</li>
+    <li>Use the <b>Search</b> box, and/or track and day selectors at the top of the page to filter the list of sessions.</li>
+    <li>Click the session name to get a full description.</li>
+    <li>Alternatively, use the <b>People</b> section to find what individual participants are up to.</li>
+</ul>
+
+<h2>To build your own schedule</h2>
+<p>Click the light blue square to the left of a session title. It will turn red, and the session will be added to the list of sessions in <b>My con</b>. Click again to remove a session from your schedule.</p>
+
+<h2>To save your schedule</h2>
+<p>Your browser will remember your con schedule between uses. To access the same schedule on a different device or browser (e.g. moving from a desktop to a mobile phone), go to <b>My con</b>, select <b>Export selection</b> at the top of the screen, and save or send the resulting link to your other device's browser.</p>
+
+<h2>To use the schedule on a mobile phone</h2>
+<div id="install-instructions">
+<p>This guide will work in your browser even when you don't have an internet connection. You can also install it as a home screen app:
+<dl class="compact-dl">
+<dt>Safari on iPhone/iPad<dd>Tap on <i class="ios_share_icon"></i> (share), then tap <b>Add to Home Screen</b>.
+<dt>Chrome on Android<dd>Tap on <i class="android_menu_icon"></i> (menu), then tap <b>Add to Home Screen</b>.
+<dt>Firefox on Android<dd>Tap on <i class="android_menu_icon"></i> (menu), then tap <b>Bookmark</b> and select <b>Options</b>, and <b>Add to Home Screen</b>.
+<dt>IE on Windows Phone<dd>Tap on <i class="ie_menu_icon"></i> (menu), then tap <b>Pin to Start</b>
+</dl>
+</div>
+
+<p>This schedule should be suitable for use on most browsers and devices. It's an instance of <a href="http://konopas.org/" alt="KonOpas" title="KonOpas">KonOpas</a>, an open-source project providing conventions with easy-to-use mobile-friendly guides.</p>
+
+<script>
+if (navigator.standalone) document.getElementById('install-instructions').style.display = 'none';
+</script>
+</div>
+
+
+<div id="prog_ls" class="ls"><br><div class="ls_loading"><p>Loading programme data&hellip;</p><p>(Hm, is this "Loading" notice not going away, and you're running Firefox? You may be experiencing a bug in Firefox we can't do anything about. :-(<br/>Your options are:<ul><li>use a <a href="http://chrome.google.com/" target="_blank">different browser</a></li><li>try opening a Private Window (but your "My con" data won't be saved)</li><li>create a new <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles" target="_blank">new Firefox profile</a></li><li><a href="http://askubuntu.com/questions/110649/how-can-i-stop-firefox-throwing-a-ns-error-file-corrupted-error" target="_blank">fix the problem directly</a> (recommended for techie-geeks only)</ul><br/>Sorry for the inconvenience!</p></div></div>
+
+</div><!-- /main -->
+
+<script>
+var cb = Math.round(new Date().getTime() / 1000);
+document.write('<scr' + 'ipt src="data/program.js?cb=' + cb + '"></scr' + 'ipt>');
+document.write('<scr' + 'ipt src="data/people.js?cb=' + cb + '"></scr' + 'ipt>');
+</script>
+<script src="konopas.min.js"></script>
+<script>
+var konopas = new KonOpas({
+	'id': 'nineworlds15',
+	'default_duration': 0,
+	'time_show_am_pm': true,
+	'show_all_days_by_default': true,
+    'abbrev_00_minutes': false,
+	'use_server': false
+});
+
+konopas.set_program(program, {
+	'day': {
+        'labels': {
+            'all_days': 'All days',
+            'day': 'Select a day...'
+        }
+    },
+	'area': {
+		'labels': {
+			'all_areas': 'Everywhere',
+            'area': 'Select a room...'
+		}
+    },
+	'tag': {
+		'labels': {
+            'all_tags': 'All tracks',
+			'tag': 'Select a track...'
+		}
+	}
+});
+konopas.set_people(people);
+konopas.set_view();
+</script>
+</body>
+</html>
